@@ -1,0 +1,26 @@
+.content {
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+ }
+ 
+ .content-block {
+    color: whitesmoke;
+    font-size: 17px;
+ }
+    
+ .text-block {
+ padding: 0 15px;
+ background-color: rgb(0,0,0,0.7);
+ }
+ 
+ .code-block {
+    color:orange;
+    background-color: #282c34;
+    font-size: 15px;
+    border-radius: 15px;
+ }
+ 
+ .content-title {
+    text-align: center;
+ }

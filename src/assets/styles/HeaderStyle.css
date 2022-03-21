@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding-left: 4vw;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.Reacticon {
+    font-size: 4vmin;
+    display: flex;
+    align-items: center; 
+  }
+
+.Reacticon a:hover {
+    color:#61DBFB;
+}
+
+.header svg {
+    font-size: 5vmin;
+}
+
+svg:hover{
+    color: orange;
+}

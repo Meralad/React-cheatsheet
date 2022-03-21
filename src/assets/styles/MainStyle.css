@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main img {
+    padding-top: 20px;
+    width: 80%;
+}
