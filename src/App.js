@@ -14,7 +14,7 @@ function App() {
         <div className="App-nav">
           <Navigation />
         </div>
-        <div className="App-content">
+        <div>
           <Content />
         </div>
       </div>

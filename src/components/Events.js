@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowText from '../assets/examples/ShowText';
 
 function Events() {
     return (
@@ -53,58 +54,64 @@ function Events() {
         `}</code></pre>
             </div>
             <div className="text-block">
-                <p>В компоненте, определённом с помощью ES6-класса, в качестве обработчика события обычно выступает один из методов класса. Например, этот компонент Toggle рендерит кнопку, которая позволяет пользователю переключать состояния между «Включено» и «Выключено»:</p>
+                <p>В компоненте, определённом с помощью ES6-класса, в качестве обработчика события обычно выступает один из методов класса. Например, этот компонент ShowText рендерит кнопку, которая позволяет пользователю добавить ещё одну кнопку(много кнопок) либо скрыть все кнопки нажав на предыдущую:</p>
             </div>
             <div className="code-block">
                 <pre><code>{`
-            class Toggle extends React.Component {
+            class ShowText extends React.Component {
                 constructor(props) {
                   super(props);
-                  this.state = {isToggleOn: true};
+                  this.state = {showMode: false};
               
                   // Эта привязка обязательна для работы 'this' в колбэке.
+            
                     this.handleClick = this.handleClick.bind(this);
                 }
                 handleClick() {
-                    this.setState(prevState => ({
-                        isToggleOn: !prevState.isToggleOn
+                    this.setState(setShowMode => ({
+                        showMode: !setShowMode.showMode
                     }));
                 }
                 render() {
                     return (
-                        <button className={'toggle__btn'} onClick={this.handleClick}>
-                            {this.state.isToggleOn ? 'Включено' : 'Выключено'}
+                        <>
+                        <button className='show__btn' onClick={this.handleClick}>
+                            Покажи/скрой текст!
                         </button>
+                            {this.state.showMode ? <ShowText /> : null}
+                        </>
                     );
                 }
             }
-                    ReactDOM.render(
-                    <Toggle />,
-                    document.getElementById('root')
-                    );
         `}</code></pre>
             </div>
+            
             <div className="text-block">
-                
-                <div className="text-block">
+                <p>Результат кода:</p>
+
+                <ShowText />
+
                     <p>Этот же код, но переписанный на функциональную компоненту:</p>
                 </div>
+
                 <div className="code-block">
                     <pre><code>{`
-            function Toggle() {
-                let [isToggleOn, setIsToggleOn] = useState(true);
-                function handleClick() {
-                  setIsToggleOn(!isToggleOn)
-                }
-                return (
-                  <button className={'toggle__btn'} onClick={() => handleClick()}>
-                    {isToggleOn ? 'Включено' : 'Выключено'}
-                  </button>
-                );
-              }
+            function ShowText () {
+                const [showMode, setShowMode] = useState(false);
+                
+                return(
+                    <>
+                    <button className='show__btn' onClick={() => setShowMode(!showMode)}>
+                        Покажи/скрой текст!
+                    </button>
+                        {showMode ? <ShowText /> : null}
+                    </>
+                )
+            }
         `}</code></pre>
                 </div >
-
+                
+                <div className="text-block">
                 <p>Внутри цикла часто нужно передать дополнительный аргумент в обработчик события. Например, если id — это идентификатор строки, можно использовать следующий вариант:</p>
             </div>
             <div className="code-block">

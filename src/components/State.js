@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Counter from '../assets/examples/Count';
 
 function State() {
     return (
@@ -65,19 +65,19 @@ function State() {
             
             <div className="text-block">
                 <p>Примером работы со state является счётчик, который изменяется при нажатии на кнопку.</p>
+                <Counter />
                 <p>Код имеет следующий вид:</p>
             </div>
             <div className="code-block">
                 <pre><code>{`
-            function Counter() {
-                const [count, setCount] = useState(0);
+            function Counter () {
+                const [count, setState] = useState(0);
+            
                 return (
-                  <div className="count">
-                     <button className="count__btn" onClick={() => setCount(count - 1)}>-1</button>
-                     <p>Счётчик: {count}</p>
-                     <button className="count__btn" onClick={() => setCount(count + 1)}>+1</button>
-                  </div>
-                );
+                    <button className="count__btn" onClick={() => setState(count + 1)}>
+                        На меня нажали {count} раз
+                    </button>
+                )
             }
         `}</code></pre>
             </div >

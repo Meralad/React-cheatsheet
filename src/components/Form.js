@@ -1,3 +1,4 @@
+import { Checkbox, Radio} from 'antd';
 import React from 'react';
 
 function Form() {
@@ -77,7 +78,13 @@ function Form() {
             </div >
             <div className="text-block">
                 <p>С помощью e.target.value получаем введенное значение. После обновления новое значение this.state.name отобразится в поле ввода.</p>
+                <p>Пример полей разных типов:</p>
+            <div>
+                <Checkbox>Checkbox</Checkbox>
+                <p><Radio>Radio</Radio></p>
+                <textarea></textarea>
             </div>
+        </div>
 
         </div>
     );

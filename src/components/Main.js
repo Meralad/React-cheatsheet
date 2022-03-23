@@ -1,5 +1,5 @@
 import React from 'react';
-import roadmap from '../images/roadmap.jpeg';
+import roadmap from '../assets/images/roadmap.jpeg';
 import '../assets/styles/MainStyle.css';
 
 function Main() {

@@ -2,13 +2,12 @@ import React from 'react';
 import logo from '../logo.svg'
 import { Link } from 'react-router-dom';
 import '../assets/styles/HeaderStyle.css';
-import { HomeOutlined } from '@ant-design/icons';
 
 function Header() {
     return (
         <div className='header'>
             <Link to='/'>
-                <HomeOutlined />
+                <a href='/' class="shine-button">Home</a>
             </Link>
             <div className ='Reacticon'>
                 <a href="https://ru.reactjs.org/docs/getting-started.html">React</a>
