@@ -6,8 +6,8 @@ import '../assets/styles/HeaderStyle.css';
 function Header() {
     return (
         <div className='header'>
-            <Link to='/'>
-                <a href='/' class="shine-button">Home</a>
+            <Link to='/react-cheatsheet'>
+                <a href='/react-cheatsheet' class="shine-button">Home</a>
             </Link>
             <div className ='Reacticon'>
                 <a href="https://ru.reactjs.org/docs/getting-started.html">React</a>

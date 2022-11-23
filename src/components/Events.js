@@ -19,7 +19,6 @@ function Events() {
                         <li>Мышь: onClick, onContextMenu, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp</li>
                         <li>Выделение: onSelect</li>
                         <li>Касание: onTouchCancel, onTouchEnd, onTouchMove, onTouchStart</li>
-                        <li>UI: onScroll</li>
                         <li>Колёсико мышки: onWheel</li>
                         <li>Медиа: onAbort, onCanPlay, onCanPlayThrough, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onLoadedData, onLoadedMetadata, onLoadStart, onPause, onPlay, onPlaying, onProgress, onRateChange, onSeeked, onSeeking, onStalled, onSuspend, onTimeUpdate, onVolumeChange, onWaiting</li>
                         <li>Изображение: onLoad, onError</li>

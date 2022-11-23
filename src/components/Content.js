@@ -23,7 +23,7 @@ function Content() {
     return (
         <div className='content'>
             <Routes>
-                <Route path='/' element={<Main />} />
+                <Route path='/react-cheatsheet' element={<Main />} />
                 <Route path='/components' element={<Component />} />
                 <Route path='/props' element={<Props />} />
                 <Route path='/state' element={<State />} />
